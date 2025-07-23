@@ -1,0 +1,293 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ct_header">
+                    <div class="ct_logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="mb-0 ct_fw_600 d-flex align-items-center gap-3" data-bs-toggle="modal"
+                            data-bs-target="#ct_logout_modal_post"><img src="assets/img/user_.jpg" class="ct_img_w_30"
+                                alt="">John
+                            Doe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section class="ct_py_60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex align-items-center justify-content-between ct_flex_col_767 gap-3">
+                    <h2 class="ct_fs_28 ct_ff_Electrolize mb-0">Team Statistics</h2>
+                    <div class="d-flex align-items-center gap-3 ct_flex_col_575 ct_w_100_575">
+                        <p class="mb-0 ct_fs_14 ct_text_op_6">Last Updated: Today, 3:45 PM IST</p>
+                        <button class="ct_blue_btn ct_fw_400 ct_w_100_575"><i
+                                class="fa-solid fa-arrows-rotate me-2"></i>Refresh
+                            Stats</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="multiselect ct_w_100_575">
+            <div class="selectBox position-relative" onclick="showCheckboxes1()">
+                <select class="form-control ct_input">
+                    <option>Select an option</option>
+                </select>
+                <i class="fa-solid fa-angle-down ct_show_eye"></i>
+                <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes1">
+                <label for="one">
+                    <input type="checkbox" id="one" />Team 1</label>
+                <label for="two">
+                    <input type="checkbox" id="two" />Team 2</label>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="ct_dash_card">
+                    <div class="ct_card_title">
+                        <h4 class="mb-0 ct_fs_28 ct_fw_700">4759</h4>
+                        <h6 class="ct_fs_18 mt-2 ct_black_text ct_text_op_07">
+                            Win
+                        </h6>
+                    </div>
+                    <div>
+                        <img src="assets/img/total_teams.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="ct_dash_card">
+                    <div class="ct_card_title">
+                        <h4 class="mb-0 ct_fs_28 ct_fw_700">1856</h4>
+                        <h6 class="ct_fs_18 mt-2 ct_black_text ct_text_op_07">
+                            Loss
+                        </h6>
+                    </div>
+                    <div>
+                        <img src="assets/img/total_mathces.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="ct_dash_card">
+                    <div class="ct_card_title">
+                        <h4 class="mb-0 ct_fs_28 ct_fw_700">156</h4>
+                        <h6 class="ct_fs_18 mt-2 ct_black_text ct_text_op_07">
+                            Tie
+                        </h6>
+                    </div>
+                    <div>
+                        <img src="assets/img/total_player.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 mb-4">
+                <div class="ct_dash_card">
+                    <div class="ct_card_title">
+                        <h4 class="mb-0 ct_fs_28 ct_fw_700">78%</h4>
+                        <h6 class="ct_fs_18 mt-2 ct_black_text ct_text_op_07">
+                            Win Rate
+                        </h6>
+                    </div>
+                    <div>
+                        <img src="assets/img/win_rate.svg" alt="">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class=" mt-4">
+            <div class="mb-4 d-flex align-items-center justify-content-between ct_flex_col_575 gap-3">
+                <div class="multiselect ct_w_100_575">
+                    <div class="selectBox position-relative" onclick="showCheckboxes()">
+                        <select class="form-control ct_input">
+                            <option>Select an option</option>
+                        </select>
+                        <i class="fa-solid fa-angle-down ct_show_eye"></i>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes">
+                        <label for="one">
+                            <input type="checkbox" id="one" />Team 1</label>
+                        <label for="two">
+                            <input type="checkbox" id="two" />Team 2</label>
+                        <label for="three">
+                            <input type="checkbox" id="three" />Team 3</label>
+                    </div>
+                </div>
+                <!-- <button class="ct_blue_btn ct_white_btn_2 ct_w_100_575" data-bs-toggle="modal"
+                    data-bs-target="#ct_edit_column"><i class="fa-solid fa-pencil me-2"></i> Edit Column</button> -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mb-5">
+                    <div class="text-end mb-3">
+                        <button class="ct_blue_btn ct_white_btn_2 ms-auto" (click)="onAddColumnClick()"
+                            [disabled]="customColumns.length >= 5">
+                            <i class="fa-solid fa-plus me-2"></i> Add Column
+                        </button>
+                    </div>
+                    <div class="table-responsive ct_custom_table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th *ngFor="let head of headers">{{ head }}</th>
+                                    <th *ngFor="let col of customColumns">{{ col }}</th>
+
+                                    <!-- Show input only if showInput is true -->
+                                    <th *ngIf="showInput">
+                                        <div class="position-relative d-flex align-items-center gap-2">
+                                            <input type="text" class="form-control ct_input ct_h_30"
+                                                style="width: 200px" placeholder="Column name"
+                                                [(ngModel)]="newColumnName" />
+                                            <button class="btn btn-sm btn-primary"
+                                                (click)="saveNewColumn()">Save</button>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of tableData; let i = index">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>{{ row.name }}</td>
+                                    <td>{{ row.position }}</td>
+                                    <td>{{ row.gamesPlayed }}</td>
+                                    <td>{{ row.goals }}</td>
+                                    <td>{{ row.assists }}</td>
+                                    <td>{{ row.points }}</td>
+                                    <td>{{ row.playoffGoals }}</td>
+                                    <td>{{ row.playoffAssists }}</td>
+                                    <td>{{ row.playoffPoints }}</td>
+
+                                    <td *ngFor="let col of row.custom">
+                                        {{ col }}
+                                    </td>
+
+                                    <!-- Extra <td> for Save input cell -->
+                                    <td *ngIf="showInput"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-12 mb-5">
+                    <div class="text-end mb-3">
+                        <button class="ct_blue_btn ct_white_btn_2 ms-auto"><i class="fa-solid fa-plus me-2"></i> Add
+                            Column</button>
+                    </div>
+
+                    <div class="table-responsive ct_custom_table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Player Name</th>
+                                    <th>position</th>
+                                    <th>Games Played</th>
+                                    <th>Goals</th>
+                                    <th>Assists</th>
+                                    <th>Points</th>
+                                    <th>Playoff Goals</th>
+                                    <th>Playoff Assists</th>
+                                    <th>Playoff Points</th>
+                                    <th>
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control ct_input ct_h_30"
+                                                style="width: 200px; padding-right: 60px;" placeholder="Column name">
+                                            <div class="ct_add_col">
+                                                <span>Save</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John Smith</td>
+                                    <td>23</td>
+                                    <td>5</td>
+                                    <td>20</td>
+                                    <td>15</td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>5</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>John Smith</td>
+                                    <td>23</td>
+                                    <td>5</td>
+                                    <td>20</td>
+                                    <td>15</td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>5</td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <div class="ct_loader_main">
+    <div class="jump">
+      <div class="basket-ball spin">
+        <div class="line2"></div>
+        <div class="line1"></div>
+      </div>
+    </div>
+  </div> -->
+<!-- All Modal S -->
+
+<div class="modal fade" id="ct_logout_modal_post" tabindex="-1" aria-labelledby="ct_delete_postLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body pt-5 pb-4">
+                <div class="ct_delete_post_modal">
+                    <figure>
+                        <figcaption>
+                            <h4 class="ct_fs_20 ct_fw_600 text-center">
+                                Are you sure you want to logout ?
+                            </h4>
+                        </figcaption>
+                    </figure>
+                    <div class="modal-footer justify-content-center border-0 ct_modal_footer">
+                        <button type="button" class="ct_blue_btn ct_outline_btn w-100 ct_fw_600"
+                            data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <a href="javascript:void(0)" routerLink="/" data-bs-toggle="modal"
+                            data-bs-target="#ct_login_modal"
+                            class="ct_border_radius_10 ct_blue_btn w-100 ct_fw_600 text-center">
+                            Yes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,4 +10,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'nhl';
+
+  // ngAfterViewInit() {
+  //   AOS.init({
+  //     duration: 1000,
+  //     once: true
+  //   });
+  // }
+
 }
